@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+</head>
+<body>
+<h2> Inscription </h2>
+<form (ngSubmit)="register()">
+  <input [(ngModel)]="email" name="email" placeholder="Email" required>
+  <input [(ngModel)]="password" name="password" placeholder="password" required>
+  <button type="submit"> Créer un compte </button>
+</form>
+<p *ngIf="message" style="color: green"> {{ message }}</p>
+<p *ngIf="error" style="color: red"> {{ error }}</p>
+
+</body>
+</html>
